@@ -1,0 +1,68 @@
+#!/usr/bin/expect -f
+
+# Robust TOPAS command-line automation.
+#
+# Usage:
+#   ./run_topas_no_scatter.exp TOPAS_FILE [PREINIT_MACRO] [SEQUENCE_MACRO]
+#
+# PREINIT_MACRO is executed at the Geant4 PreInit> prompt.
+# SEQUENCE_MACRO is executed at an optional Idle> prompt.
+# After each macro finishes and the prompt returns, the script sends "exit".
+
+set timeout -1
+log_user 1
+
+if {$argc < 1 || $argc > 3} {
+    puts stderr "Usage: $argv0 TOPAS_FILE ?PREINIT_MACRO? ?SEQUENCE_MACRO?"
+    exit 2
+}
+
+set topas_file [lindex $argv 0]
+set preinit_macro ""
+set sequence_macro ""
+
+if {$argc >= 2} {
+    set preinit_macro [lindex $argv 1]
+}
+if {$argc >= 3} {
+    set sequence_macro [lindex $argv 2]
+}
+
+set preinit_executed 0
+set sequence_executed 0
+
+spawn topas $topas_file
+
+expect {
+    -re {PreInit>[ \t]*} {
+        if {$preinit_macro ne "" && !$preinit_executed} {
+            puts stderr "\n[clock format [clock seconds]]: executing PreInit macro: $preinit_macro"
+            send -- "/control/execute $preinit_macro\r"
+            set preinit_executed 1
+        } else {
+            puts stderr "\n[clock format [clock seconds]]: leaving PreInit"
+            send -- "exit\r"
+        }
+        exp_continue
+    }
+
+    -re {Idle>[ \t]*} {
+        if {$sequence_macro ne "" && !$sequence_executed} {
+            puts stderr "\n[clock format [clock seconds]]: executing sequence macro: $sequence_macro"
+            send -- "/control/execute $sequence_macro\r"
+            set sequence_executed 1
+        } else {
+            puts stderr "\n[clock format [clock seconds]]: leaving Idle prompt"
+            send -- "exit\r"
+        }
+        exp_continue
+    }
+
+    eof {
+        set wait_result [wait]
+        if {[llength $wait_result] >= 4} {
+            exit [lindex $wait_result 3]
+        }
+        exit 0
+    }
+}

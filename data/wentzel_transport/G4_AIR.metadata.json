@@ -1,0 +1,27 @@
+{
+  "geant4_version": "$Name: geant4-11-03-patch-02 [MT]$",
+  "particle": "proton",
+  "material": "G4_AIR",
+  "physics_list": "g4em-standard_opt4",
+  "msc_process": "msc",
+  "msc_model_class": "G4WentzelVIModel",
+  "msc_model_name": "WentzelVIUni",
+  "wentzel_combined_mode": true,
+  "msc_polar_angle_limit_rad": 3.1415926535897931,
+  "factor_for_angle_limit": 1,
+  "coulomb_scat_active_during_initialization": true,
+  "coulomb_scat_active_during_extraction": false,
+  "loss_fluctuations": false,
+  "mu_had_lateral_displacement": false,
+  "gamma_electron_positron_production_cut_m": 100,
+  "energy_min_mev": 0.0001,
+  "energy_max_mev": 300,
+  "number_of_samples": 6000,
+  "columns": {
+    "energy_mev": "MeV",
+    "first_transport_coefficient_per_m": "m^-1",
+    "first_transport_mean_free_path_m": "m"
+  },
+  "geant4_api": "G4VMscModel::GetTransportMeanFreePath on the active proton G4WentzelVIModel",
+  "interpretation": "Reciprocal of G4VMscModel::GetTransportMeanFreePath for the initialized Opt4 G4WentzelVIModel transport table."
+}

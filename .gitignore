@@ -1,0 +1,32 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+results/
+topas_cache/
+topas_test/
+bfp_mc_cache/
+thesis_results/
+thesis_results_old/
+
+# Virtual environments
+.venv
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Local thesis backup
+thesis_results copy/
+*.npz
+
+# All result folders and backups
+thesis_results*/
+
+# CT data (CORT, provided by E. Benschop), not redistributed
+data/ct/
+misc/
