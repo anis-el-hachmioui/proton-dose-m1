@@ -86,9 +86,9 @@ thesis.
 ## CT data
 
 The CT-derived case uses the prostate CT of the CORT dataset (Craft et al.,
-*GigaScience* 3:37, 2014, doi:10.1186/2047-217X-3-37), which is not included
-in this repository. It is read as a Hounsfield-unit array of shape
-(183, 183, 90) with 3 mm voxels from `data/ct/prostate.npz`. After running
+*GigaScience* 3:37, 2014, doi:10.1186/2047-217X-3-37), which is included
+in this repository as `data/ct/prostate.npz` (CC0; see `data/ct/README.md`), a Hounsfield-unit array of shape
+(183, 183, 90) with 3 mm voxels. After running
 `thesis_experiments.scattering_nuclear.ct`, the dose can be inspected on the
 CT with napari:
 

@@ -28,5 +28,9 @@ thesis_results copy/
 thesis_results*/
 
 # CT data (CORT, provided by E. Benschop), not redistributed
-data/ct/
+data/ct/*
 misc/
+
+# CORT prostate CT (CC0), see data/ct/README.md
+!data/ct/prostate.npz
+!data/ct/README.md
