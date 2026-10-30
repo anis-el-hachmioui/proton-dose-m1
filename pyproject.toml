@@ -1,5 +1,5 @@
 [project]
-name = "pt-moment-thesis-v5"
+name = "proton-dose-m1"
 version = "0.1.0"
 description = "Deterministic moment-based proton transport and dose calculation solver."
 readme = "README.md"

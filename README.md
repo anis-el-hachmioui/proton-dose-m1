@@ -14,6 +14,11 @@ energy-loss coordinate, and a realizability projection. A particle Monte
 Carlo solver of the same BFP model and an analytical CSDA solution serve as
 references.
 
+![WENO-Z dose of a 150 MeV pencil beam in a prostate CT (CORT dataset), rendered with napari](thesis_results/scattering_nuclear/ct/ct_overview_3d.png)
+
+*Dose of a 150 MeV proton pencil beam computed with WENO-Z in a geometry
+derived from the CORT prostate CT (thesis Section 5.5.4).*
+
 ## Installation
 
 Requires Python 3.11 and [uv](https://docs.astral.sh/uv/).
@@ -36,6 +41,7 @@ src/proton_solver/        solver package
   convergence.py          self-convergence studies
   metrics.py              gamma analysis, maximum dose, R80, distal falloff width
   topas/                  TOPAS input writer (not used for the thesis results)
+examples/                 small, quick examples of the solver API (see below)
 thesis_experiments/       one script per result of the thesis (see below)
 tools/                    checks, figures, and the export of tables for the thesis
   geant4_material_data/   generation of the material tables in data/ from Geant4
@@ -43,11 +49,26 @@ data/                     material tables (stopping power, Wentzel-VI transport
                           coefficient, nuclear removal) for five Geant4 materials
 ```
 
+## Examples
+
+Small configurations that run in one to a few minutes and show the solver
+API. Each writes its results and plots to `results/<run>/`.
+
+| Example | What it shows |
+|---|---|
+| `examples/homogeneous.py` | Reduced model in water against the analytical CSDA solution |
+| `examples/longitudinal_slabs.py` | Extended model, bone slab across the beam, against the BFP Monte Carlo |
+| `examples/transversal_slabs.py` | Extended model, lateral water-bone interface, against the BFP Monte Carlo |
+| `examples/convergence_study.py` | Self-convergence study (coupled, space-only, or energy-only refinement) |
+| `examples/topas_case.py` | Export of a configuration to TOPAS (requires a TOPAS installation) |
+
+Run them with, for example, `uv run python examples/homogeneous.py`.
+
 ## Reproducing the thesis results
 
 All commands are run from the repository root. Results are written to
-`thesis_results/` (not tracked by git). Monte Carlo references are cached in
-`bfp_mc_cache/`, so repeated runs reuse them.
+`thesis_results/` (see *Included results* below). Monte Carlo references are
+cached in `bfp_mc_cache/`, so repeated runs reuse them.
 
 | Thesis | Command |
 |---|---|
@@ -83,12 +104,23 @@ the figures used in the thesis from `thesis_results/` to
 `thesis_results_latex/`, which is uploaded to the `figures/` folder of the
 thesis.
 
+### Included results
+
+`thesis_results/` contains the results of all runs above: for every run the
+configuration (`config.json`), the code version and runtime
+(`metadata.json`), the metrics (`metrics.json`), and the figures and tables.
+`thesis_results_latex/` contains the tables and figures exactly as used in
+the thesis. The full three-dimensional dose and fluence arrays (`*.npz`,
+about 3.5 GB) are not included; rerunning a script regenerates them. The
+results were produced with development versions of this code; the solver
+and the evaluation of the results are unchanged in this repository.
+
 ## CT data
 
 The CT-derived case uses the prostate CT of the CORT dataset (Craft et al.,
-*GigaScience* 3:37, 2014, doi:10.1186/2047-217X-3-37), which is included
-in this repository as `data/ct/prostate.npz` (CC0; see `data/ct/README.md`), a Hounsfield-unit array of shape
-(183, 183, 90) with 3 mm voxels. After running
+*GigaScience* 3:37, 2014, doi:10.1186/2047-217X-3-37), which is included as
+`data/ct/prostate.npz` (CC0; see `data/ct/README.md`), a Hounsfield-unit
+array of shape (183, 183, 90) with 3 mm voxels. After running
 `thesis_experiments.scattering_nuclear.ct`, the dose can be inspected on the
 CT with napari:
 
@@ -102,3 +134,13 @@ The tables in `data/` were generated with Geant4
 (`G4EmStandardPhysics_option4`; for water this includes the ICRU90 stopping
 power) by the programs in `tools/geant4_material_data/`. Both the
 deterministic solver and the BFP Monte Carlo solver read the same tables.
+
+## Citation
+
+If you use this code, please cite the thesis:
+
+> A. El Hachmioui, *Moment Methods for Proton Therapy Dose Calculations*,
+> MSc thesis, Delft University of Technology, 2026.
+
+GitHub's *Cite this repository* button gives the same reference in BibTeX
+and APA format (from `CITATION.cff`).

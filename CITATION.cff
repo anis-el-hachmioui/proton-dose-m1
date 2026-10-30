@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the MSc thesis it was developed for."
+title: "proton-dose-m1: deterministic proton dose calculation with the M1 moment model"
+type: software
+authors:
+  - family-names: "El Hachmioui"
+    given-names: "Anis"
+    affiliation: "Delft University of Technology"
+repository-code: "https://github.com/anis-el-hachmioui/proton-dose-m1"
+version: "1.0.0"
+date-released: "2026-10-30"
+keywords:
+  - proton therapy
+  - dose calculation
+  - radiation transport
+  - Boltzmann-Fokker-Planck
+  - moment methods
+  - M1 closure
+  - finite-volume method
+preferred-citation:
+  type: thesis
+  thesis-type: "MSc thesis"
+  title: "Moment Methods for Proton Therapy Dose Calculations"
+  authors:
+    - family-names: "El Hachmioui"
+      given-names: "Anis"
+  institution:
+    name: "Delft University of Technology"
+    city: "Delft"
+    country: "NL"
+  year: 2026

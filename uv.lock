@@ -669,7 +669,7 @@ wheels = [
 ]
 
 [[package]]
-name = "pt-moment-thesis-v5"
+name = "proton-dose-m1"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
