@@ -1,23 +1,89 @@
 # proton-dose-m1
 
-Deterministic proton dose calculation with the $M_1$ angular moment model,
-developed for the MSc thesis *Moment Methods for Proton Therapy Dose
+**A third-order deterministic solver for proton therapy dose calculation,
+based on the $M_1$ angular moment model.**
+
+Developed for the MSc thesis *Moment Methods for Proton Therapy Dose
 Calculations* (A. El Hachmioui, Delft University of Technology, 2026;
 supervisors D. Lathouwers, M. B. van Gijzen, E. Benschop).
 
-The solver transports the zeroth and first angular moments of the proton
-fluence through a Boltzmann-Fokker-Planck (BFP) model with continuous energy
-loss, Wentzel-VI angular scattering, and primary-proton nuclear removal. It
-uses a finite-volume discretization with HLL fluxes and first-order, MUSCL,
-or WENO-Z reconstruction, the integrating-factor scheme IF-SSPRK3 in the
-energy-loss coordinate, and a realizability projection. A particle Monte
-Carlo solver of the same BFP model and an analytical CSDA solution serve as
-references.
+![Integrated depth dose of a 150 MeV proton beam in water for first-order, MUSCL, and WENO-Z reconstruction against Monte Carlo](docs/scheme_comparison.png)
 
-![WENO-Z dose of a 150 MeV pencil beam in a prostate CT (CORT dataset), rendered with napari](thesis_results/scattering_nuclear/ct/ct_overview_3d.png)
+*Integrated depth dose of a 150 MeV proton beam in water on a 0.5 mm grid.
+First-order and MUSCL reconstruction smear out the Bragg peak; the
+third-order WENO-Z scheme lies on top of the Monte Carlo reference.*
 
-*Dose of a 150 MeV proton pencil beam computed with WENO-Z in a geometry
-derived from the CORT prostate CT (thesis Section 5.5.4).*
+## The problem
+
+Proton transport is described by the Boltzmann-Fokker-Planck (BFP)
+equation. Because protons move in almost one direction, resolving its
+angular dependence directly is expensive. The $M_1$ moment model removes the
+angle: it evolves only the scalar and vector fluence, closed with the
+entropy-based $M_1$ closure, so that only space and energy remain.
+
+The difficulty is numerical diffusion. The protons of one energy form a thin
+layer that is transported over the full range of the beam, so a low-order
+scheme spreads them out like an artificial range straggling. With
+first-order or second-order (MUSCL) reconstruction, the Bragg peak drops by
+up to 52% and 30% and the distal falloff broadens by several millimetres,
+even on a 0.5 mm grid.
+
+## The method
+
+Within the literature reviewed in the thesis, the $M_1$ model of proton
+transport had not been solved with a high-order finite-volume method. This
+code does so. A high order is only reached if every part of the scheme has
+it, so each component is chosen for that:
+
+- **WENO-Z reconstruction** (fifth order on smooth data), with first-order
+  and MUSCL reconstruction for comparison
+- **HLL fluxes** with the exact $M_1$ characteristic speeds
+- a **realizability projection** that keeps the moments physically admissible
+- **IF-SSPRK3**, a third-order strong-stability-preserving Runge-Kutta march
+  in energy with a step-local integrating factor that absorbs the stiff
+  scattering and nuclear-removal terms
+- a consistent high-order **inflow boundary**
+
+The physics model contains continuous energy loss (CSDA), Wentzel-VI
+small-angle scattering, and primary-proton nuclear removal, with material
+data from Geant4.
+
+## Results
+
+The solver is verified against a particle Monte Carlo solver of the same BFP
+equation with the same material data, so all differences come from the
+$M_1$ closure and the discretization. Ranges are over six benchmarks: water,
+a bone slab across the beam, and a lateral water-bone interface, each with
+and without scattering and nuclear removal.
+
+| | First order | MUSCL | WENO-Z |
+|---|---|---|---|
+| Observed convergence order (dose) | 0.96 | 1.80 – 1.84 | **3.11 – 3.21** |
+| Maximum-dose difference | −20% to −52% | −18% to −30% | **−0.8% to −5.9%** |
+| Distal falloff broadening | 9.7 – 10.7 mm | 2.5 – 3.1 mm | **≤ 0.18 mm** |
+| Gamma pass rate, 1%/1 mm | 84.3 – 92.5% | 94.1 – 98.3% | **99.46 – 100%** |
+
+In a geometry derived from a prostate CT, 99.99% of the voxels pass the
+1%/1 mm criterion and the maximum dose differs by 1.7%.
+
+**Speed.** The main goal of the thesis was accuracy; speed came second, and
+the work on it is not finished. The first results are promising. The plain
+solver is not yet optimized, and at equal statistical accuracy the
+same-model Monte Carlo solver is still faster. A *moving active domain*,
+which only transports a box that follows the beam through the energy march,
+already makes WENO-Z up to 11 times faster. With it, the deterministic
+solver is 1.7 times faster than Monte Carlo in water and 2.9 times faster
+with a bone slab, at a dose change below 0.06% of the maximum. At a lateral
+water-bone interface the moving domain still changes the dose by 1.6%, so
+making it exact there is the next step (thesis Appendix D.4). Together with
+the accuracy results, this suggests that a high-order moment method can
+compete with Monte Carlo in both accuracy and speed.
+
+**Limitations.** At a lateral water-bone interface, a local dose deficit of
+about 10% within 0.5 mm of the interface persists under refinement,
+consistent with a limitation of the $M_1$ closure. The BFP model neglects
+energy-loss straggling and secondary particles; a comparison with
+full-physics Monte Carlo codes and measurements is future work.
 
 ## Installation
 
@@ -45,6 +111,7 @@ examples/                 small, quick examples of the solver API (see below)
 thesis_experiments/       one script per result of the thesis (see below)
 tools/                    checks, figures, and the export of tables for the thesis
   geant4_material_data/   generation of the material tables in data/ from Geant4
+docs/                     figure used in this README
 data/                     material tables (stopping power, Wentzel-VI transport
                           coefficient, nuclear removal) for five Geant4 materials
 ```
@@ -116,6 +183,8 @@ results were produced with development versions of this code; the solver
 and the evaluation of the results are unchanged in this repository.
 
 ## CT data
+
+![WENO-Z dose of a 150 MeV pencil beam in a prostate CT (CORT dataset), rendered with napari](thesis_results/scattering_nuclear/ct/ct_overview_3d.png)
 
 The CT-derived case uses the prostate CT of the CORT dataset (Craft et al.,
 *GigaScience* 3:37, 2014, doi:10.1186/2047-217X-3-37), which is included as
