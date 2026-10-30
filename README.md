@@ -7,7 +7,7 @@ Developed for the MSc thesis *Moment Methods for Proton Therapy Dose
 Calculations* (A. El Hachmioui, Delft University of Technology, 2026;
 supervisors D. Lathouwers, M. B. van Gijzen, E. Benschop).
 
-![Integrated depth dose of a 150 MeV proton beam in water for first-order, MUSCL, and WENO-Z reconstruction against Monte Carlo](docs/scheme_comparison.png)
+![Integrated depth dose of a 150 MeV proton beam in water for first-order, MUSCL, and WENO-Z reconstruction against Monte Carlo](thesis_results/reduced_physics/homogeneous_water/figures/comparison_IDD.png)
 
 *Integrated depth dose of a 150 MeV proton beam in water on a 0.5 mm grid.
 First-order and MUSCL reconstruction smear out the Bragg peak; the
@@ -111,7 +111,6 @@ examples/                 small, quick examples of the solver API (see below)
 thesis_experiments/       one script per result of the thesis (see below)
 tools/                    checks, figures, and the export of tables for the thesis
   geant4_material_data/   generation of the material tables in data/ from Geant4
-docs/                     figure used in this README
 data/                     material tables (stopping power, Wentzel-VI transport
                           coefficient, nuclear removal) for five Geant4 materials
 ```
