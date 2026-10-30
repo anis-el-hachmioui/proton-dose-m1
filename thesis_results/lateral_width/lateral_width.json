@@ -1,0 +1,31 @@
+{
+  "case": "scattering_nuclear/homogeneous_water",
+  "depth_limit_mm": 142.71442984298972,
+  "mc_sigma_at_end_mm": 3.608018335384382,
+  "schemes": {
+    "first_order": {
+      "max_abs_rel_difference_percent": 5.831060190114945,
+      "rel_difference_at_half_depth_percent": 4.130704065121171,
+      "rel_difference_at_end_percent": 5.530291787038055,
+      "sigma_at_end_mm": 3.8075522770609718
+    },
+    "muscl": {
+      "max_abs_rel_difference_percent": 0.5759404291469261,
+      "rel_difference_at_half_depth_percent": 0.31827914563946624,
+      "rel_difference_at_end_percent": 0.5759404291469261,
+      "sigma_at_end_mm": 3.628798371668895
+    },
+    "weno_z": {
+      "max_abs_rel_difference_percent": 0.026270724732646578,
+      "rel_difference_at_half_depth_percent": 0.005117924598629919,
+      "rel_difference_at_end_percent": 0.026270724732646578,
+      "sigma_at_end_mm": 3.6089661879495742
+    },
+    "weno_z_coarse": {
+      "max_abs_rel_difference_percent": 0.1836310590881185,
+      "rel_difference_at_half_depth_percent": 0.07884331027112612,
+      "rel_difference_at_end_percent": 0.1836310590881185,
+      "sigma_at_end_mm": 3.6255969257711635
+    }
+  }
+}

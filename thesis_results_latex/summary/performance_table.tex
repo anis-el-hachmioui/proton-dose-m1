@@ -1,0 +1,15 @@
+\begin{tabular}{ll rrr r r rr}
+\toprule
+ & & \multicolumn{3}{c}{Deterministic [s]} & \shortstack{WENO-Z\\moving} & \shortstack{MC for\\$1\%$ [s]} & \multicolumn{2}{c}{Speed-up WENO-Z} \\
+\cmidrule(lr){3-5}\cmidrule(lr){8-9}
+Model & Geometry & First order & MUSCL & WENO-Z & domain [s] & & static & moving \\
+\midrule
+Reduced & Homogeneous water & $1077$ & $1032$ & $1392$ & $133$ & $10$ & $0.01$ & $0.08$ \\
+Reduced & Depth-wise slab & $1066$ & $1042$ & $1483$ & $144$ & $39$ & $0.03$ & $0.27$ \\
+Reduced & Lateral interface & $1115$ & $1057$ & $1400$ & $410$ & $39$ & $0.03$ & $0.10$ \\
+\addlinespace
+Extended & Homogeneous water & $1100$ & $1102$ & $1541$ & $139$ & $234$ & $0.15$ & $1.69$ \\
+Extended & Depth-wise slab & $1450$ & $1448$ & $1942$ & $196$ & $573$ & $0.29$ & $2.92$ \\
+Extended & Lateral interface & $1453$ & $1449$ & $1938$ & $594$ & $448$ & $0.23$ & $0.75$ \\
+\bottomrule
+\end{tabular}

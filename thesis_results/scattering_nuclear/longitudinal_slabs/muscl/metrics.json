@@ -1,0 +1,44 @@
+{
+  "reference": "BFP Monte Carlo",
+  "performance": {
+    "deterministic_runtime_seconds": 1447.994617991004,
+    "topas_runtime_seconds": null,
+    "bfp_mc_runtime_seconds": 2490.423460758997,
+    "speedup_vs_bfp_mc_x": 1.7199120976114495,
+    "speedup_vs_topas_x": "-"
+  },
+  "gamma": {
+    "normalization": "global_reference_maximum",
+    "lower_dose_cutoff_percent": 10.0,
+    "interp_fraction": 10,
+    "3_percent_3_mm": {
+      "pass_rate_percent": 98.9760884602813
+    },
+    "2_percent_2_mm": {
+      "pass_rate_percent": 98.21949359326818
+    },
+    "1_percent_1_mm": {
+      "pass_rate_percent": 94.14791860397351
+    }
+  },
+  "maximum_dose": {
+    "deterministic_Gy": 0.0035952086616808684,
+    "reference_Gy": 0.005072265602093126,
+    "relative_difference_percent": -29.120260181224218
+  },
+  "range": {
+    "deterministic_r80_mm": 143.8805909226449,
+    "reference_r80_mm": 143.9233408664823,
+    "r80_difference_mm": -0.04274994383740571,
+    "deterministic_dfw_mm": 5.534799096672649,
+    "reference_dfw_mm": 2.4606481798073734,
+    "dfw_difference_mm": 3.0741509168652756,
+    "peak_search_from_mm": 122.25000000000001
+  },
+  "exact_reference": null,
+  "central_axis_bragg_peak": {
+    "deterministic_depth_mm": 140.25,
+    "reference_depth_mm": 142.25000000000003,
+    "depth_difference_mm": -2.0000000000000018
+  }
+}

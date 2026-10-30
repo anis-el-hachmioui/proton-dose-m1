@@ -1,0 +1,44 @@
+{
+  "histories": 100000000,
+  "grid_resolution": [
+    100,
+    100,
+    400
+  ],
+  "mc_runtime_seconds": 166.81562150899845,
+  "results": [
+    {
+      "comparison": "linear vs PCHIP analytical",
+      "l1": 5.604800388551176e-06,
+      "l2": 1.5245541374378954e-05,
+      "linf": 3.195526970832182e-05,
+      "idd_max_abs_difference_rel": 3.195526970754257e-05,
+      "idd_peak_rel_difference": -2.188217583798391e-06,
+      "r80_mm": 158.76589674630324,
+      "r80_reference_mm": 158.76599447716552,
+      "r80_difference_um": -0.0977308622918116
+    },
+    {
+      "comparison": "MC vs linear analytical (old)",
+      "l1": 0.003614189251642608,
+      "l2": 0.0033977867706027473,
+      "linf": 0.006767955077283133,
+      "idd_max_abs_difference_rel": 0.00015562364956037573,
+      "idd_peak_rel_difference": 8.03222269969428e-05,
+      "r80_mm": 158.76623912993364,
+      "r80_reference_mm": 158.76589674630324,
+      "r80_difference_um": 0.34238363041949604
+    },
+    {
+      "comparison": "MC vs PCHIP analytical (new)",
+      "l1": 0.003614139638285031,
+      "l2": 0.0033978280769398454,
+      "linf": 0.006769947568365975,
+      "idd_max_abs_difference_rel": 0.00012940967649976274,
+      "idd_peak_rel_difference": 7.813383365062876e-05,
+      "r80_mm": 158.76623912993364,
+      "r80_reference_mm": 158.76599447716552,
+      "r80_difference_um": 0.24465276812768444
+    }
+  ]
+}

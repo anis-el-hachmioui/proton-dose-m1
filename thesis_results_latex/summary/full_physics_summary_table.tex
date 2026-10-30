@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrr}
+\toprule
+Geometry & Scheme & $\gamma_{1\%/1\mathrm{mm}}$ [\%] & Max. dose diff. [\%] & Runtime [s] & Speedup vs. BFP \\
+\midrule
+Homogeneous & First order & 85.630 & -24.331 & 1100.485 & 0.819 \\
+ & MUSCL & 95.531 & -23.470 & 1101.718 & 0.819 \\
+ & WENO-Z & 100.000 & -0.946 & 1540.931 & 0.585 \\
+\addlinespace
+Depth slab & First order & 84.270 & -31.138 & 1449.804 & 1.718 \\
+ & MUSCL & 94.148 & -29.120 & 1447.995 & 1.720 \\
+ & WENO-Z & 99.983 & -3.841 & 1941.636 & 1.283 \\
+\addlinespace
+Lateral & First order & 87.286 & -19.994 & 1453.332 & 1.591 \\
+ & MUSCL & 94.530 & -18.105 & 1448.748 & 1.596 \\
+ & WENO-Z & 99.463 & -5.916 & 1938.374 & 1.193 \\
+\bottomrule
+\end{tabular}

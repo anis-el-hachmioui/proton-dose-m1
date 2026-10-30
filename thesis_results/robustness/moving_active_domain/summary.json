@@ -1,0 +1,392 @@
+{
+  "reduced_physics/homogeneous_water/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 133.01507542600302,
+    "bfp_mc_runtime_seconds": 166.81562150899845,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 133.01507542600302,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 166.81562150899845,
+        "speedup_vs_bfp_mc_x": 1.254110641028797,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 100.0
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 100.0
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 100.0
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.023007153579919344,
+        "reference_Gy": 0.023195176416636414,
+        "relative_difference_percent": -0.8106117985039916
+      },
+      "range": {
+        "deterministic_r80_mm": 158.75144968345515,
+        "reference_r80_mm": 158.76623912993364,
+        "r80_difference_mm": -0.014789446478508106,
+        "deterministic_dfw_mm": 2.4862741503088595,
+        "reference_dfw_mm": 2.4407012856415,
+        "dfw_difference_mm": 0.045572864667359214,
+        "peak_search_from_mm": 137.25
+      },
+      "exact_reference": {
+        "reference": "Analytical",
+        "maximum_dose": {
+          "analytical_Gy": 0.023111895883643284,
+          "relative_difference_percent": -0.4531965021444556
+        },
+        "range": {
+          "deterministic_r80_mm": 158.75144968345515,
+          "reference_r80_mm": 158.76599447716552,
+          "r80_difference_mm": -0.014544793710380421,
+          "deterministic_dfw_mm": 2.4862741503088595,
+          "reference_dfw_mm": 2.4410583185564825,
+          "dfw_difference_mm": 0.045215831752376534,
+          "peak_search_from_mm": 137.25
+        },
+        "gamma": {
+          "3_percent_3_mm": 100.0,
+          "2_percent_2_mm": 100.0,
+          "1_percent_1_mm": 100.0
+        }
+      },
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 157.25,
+        "reference_depth_mm": 157.25,
+        "depth_difference_mm": 0.0
+      }
+    }
+  },
+  "reduced_physics/longitudinal_slabs/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 144.40941102600482,
+    "bfp_mc_runtime_seconds": 597.8884800329979,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 144.40941102600482,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 597.8884800329979,
+        "speedup_vs_bfp_mc_x": 4.14023210665496,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 100.0
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 99.99250543356067
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 99.98594768792626
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.0225508423702251,
+        "reference_Gy": 0.023140918855016346,
+        "relative_difference_percent": -2.5499267703595705
+      },
+      "range": {
+        "deterministic_r80_mm": 144.08072154102214,
+        "reference_r80_mm": 144.12967702871646,
+        "r80_difference_mm": -0.04895548769431879,
+        "deterministic_dfw_mm": 2.627727068866159,
+        "reference_dfw_mm": 2.450392986025035,
+        "dfw_difference_mm": 0.17733408284112406,
+        "peak_search_from_mm": 122.25000000000001
+      },
+      "exact_reference": {
+        "reference": "Analytical",
+        "maximum_dose": {
+          "analytical_Gy": 0.023107460133124053,
+          "relative_difference_percent": -2.4088227771128117
+        },
+        "range": {
+          "deterministic_r80_mm": 144.08072154102214,
+          "reference_r80_mm": 144.12996564369877,
+          "r80_difference_mm": -0.04924410267662105,
+          "deterministic_dfw_mm": 2.627727068866159,
+          "reference_dfw_mm": 2.4504945568283034,
+          "dfw_difference_mm": 0.17723251203785595,
+          "peak_search_from_mm": 122.25000000000001
+        },
+        "gamma": {
+          "3_percent_3_mm": 100.0,
+          "2_percent_2_mm": 99.99252532047689,
+          "1_percent_1_mm": 99.97757596143066
+        }
+      },
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 142.25000000000003,
+        "reference_depth_mm": 142.25000000000003,
+        "depth_difference_mm": 0.0
+      }
+    }
+  },
+  "reduced_physics/transversal_slabs/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 410.1831124300006,
+    "bfp_mc_runtime_seconds": 584.9958790019955,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 410.1831124300006,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 584.9958790019955,
+        "speedup_vs_bfp_mc_x": 1.4261822617132425,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 99.99212872901462
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 99.98650639259651
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 99.97751065432752
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.022859498480032013,
+        "reference_Gy": 0.023185387270452027,
+        "relative_difference_percent": -1.4055783783923848
+      },
+      "range": {
+        "deterministic_r80_mm": 158.75141301855228,
+        "reference_r80_mm": 158.76528226881396,
+        "r80_difference_mm": -0.013869250261672184,
+        "deterministic_dfw_mm": 2.486293470902845,
+        "reference_dfw_mm": 2.4411536836179137,
+        "dfw_difference_mm": 0.04513978728493129,
+        "peak_search_from_mm": 137.25
+      },
+      "exact_reference": {
+        "reference": "Analytical",
+        "maximum_dose": {
+          "analytical_Gy": 0.023111895883643284,
+          "relative_difference_percent": -1.092067067461554
+        },
+        "range": {
+          "deterministic_r80_mm": 158.75141301855228,
+          "reference_r80_mm": 158.76599447716552,
+          "r80_difference_mm": -0.014581458613244225,
+          "deterministic_dfw_mm": 2.486293470902845,
+          "reference_dfw_mm": 2.4410583185564825,
+          "dfw_difference_mm": 0.04523515234636233,
+          "peak_search_from_mm": 137.25
+        },
+        "gamma": {
+          "3_percent_3_mm": 99.99104243645728,
+          "2_percent_2_mm": 99.98656365468592,
+          "1_percent_1_mm": 99.97984548202888
+        }
+      },
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 157.25,
+        "reference_depth_mm": 157.25,
+        "depth_difference_mm": 0.0
+      }
+    }
+  },
+  "scattering_nuclear/homogeneous_water/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 138.97376711600373,
+    "bfp_mc_runtime_seconds": 901.8374266089995,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 138.97376711600373,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 901.8374266089995,
+        "speedup_vs_bfp_mc_x": 6.489263731738816,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 100.0
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 100.0
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 100.0
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.004570576363669969,
+        "reference_Gy": 0.004615987655787171,
+        "relative_difference_percent": -0.9837827893726963
+      },
+      "range": {
+        "deterministic_r80_mm": 158.54621733315278,
+        "reference_r80_mm": 158.57158871443303,
+        "r80_difference_mm": -0.025371381280253624,
+        "deterministic_dfw_mm": 2.529846361055299,
+        "reference_dfw_mm": 2.4681467313948104,
+        "dfw_difference_mm": 0.06169962966048881,
+        "peak_search_from_mm": 136.75
+      },
+      "exact_reference": null,
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 156.75,
+        "reference_depth_mm": 156.75,
+        "depth_difference_mm": 0.0
+      }
+    }
+  },
+  "scattering_nuclear/longitudinal_slabs/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 196.05030868599715,
+    "bfp_mc_runtime_seconds": 2490.423460758997,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 196.05030868599715,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 2490.423460758997,
+        "speedup_vs_bfp_mc_x": 12.702981583914614,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 99.99847971560547
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 99.99467900461913
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 99.9830234909277
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.004875492273870309,
+        "reference_Gy": 0.005072265602093126,
+        "relative_difference_percent": -3.879397170006559
+      },
+      "range": {
+        "deterministic_r80_mm": 143.8959939529959,
+        "reference_r80_mm": 143.9233408664823,
+        "r80_difference_mm": -0.027346913486409052,
+        "deterministic_dfw_mm": 2.644021748047176,
+        "reference_dfw_mm": 2.4606481798073734,
+        "dfw_difference_mm": 0.183373568239803,
+        "peak_search_from_mm": 122.25000000000001
+      },
+      "exact_reference": null,
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 142.25000000000003,
+        "reference_depth_mm": 142.25000000000003,
+        "depth_difference_mm": 0.0
+      }
+    }
+  },
+  "scattering_nuclear/transversal_slabs/weno_z": {
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "bfp_mc_histories": 100000000,
+    "moving_active_domain": true,
+    "deterministic_runtime_seconds": 593.6325210450013,
+    "bfp_mc_runtime_seconds": 2312.673166187,
+    "metrics": {
+      "reference": "BFP Monte Carlo",
+      "performance": {
+        "deterministic_runtime_seconds": 593.6325210450013,
+        "topas_runtime_seconds": null,
+        "bfp_mc_runtime_seconds": 2312.673166187,
+        "speedup_vs_bfp_mc_x": 3.895799310516015,
+        "speedup_vs_topas_x": "-"
+      },
+      "gamma": {
+        "normalization": "global_reference_maximum",
+        "lower_dose_cutoff_percent": 10.0,
+        "interp_fraction": 10,
+        "3_percent_3_mm": {
+          "pass_rate_percent": 99.91419264722626
+        },
+        "2_percent_2_mm": {
+          "pass_rate_percent": 99.79006356408753
+        },
+        "1_percent_1_mm": {
+          "pass_rate_percent": 99.45738651352785
+        }
+      },
+      "maximum_dose": {
+        "deterministic_Gy": 0.004393054465398787,
+        "reference_Gy": 0.004669743747396107,
+        "relative_difference_percent": -5.925149150884459
+      },
+      "range": {
+        "deterministic_r80_mm": 158.49967686381828,
+        "reference_r80_mm": 158.52064263570873,
+        "r80_difference_mm": -0.020965771890452123,
+        "deterministic_dfw_mm": 2.557923680889612,
+        "reference_dfw_mm": 2.494734210399363,
+        "dfw_difference_mm": 0.06318947049024914,
+        "peak_search_from_mm": 136.75
+      },
+      "exact_reference": null,
+      "central_axis_bragg_peak": {
+        "deterministic_depth_mm": 25.750000000000004,
+        "reference_depth_mm": 91.25,
+        "depth_difference_mm": -65.5
+      }
+    }
+  }
+}

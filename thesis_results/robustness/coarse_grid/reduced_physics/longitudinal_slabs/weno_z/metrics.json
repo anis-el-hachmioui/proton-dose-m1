@@ -1,0 +1,64 @@
+{
+  "reference": "BFP Monte Carlo",
+  "performance": {
+    "deterministic_runtime_seconds": 64.16327389499929,
+    "topas_runtime_seconds": null,
+    "bfp_mc_runtime_seconds": 56.666769759998715,
+    "speedup_vs_bfp_mc_x": 0.8831651865634488,
+    "speedup_vs_topas_x": "-"
+  },
+  "gamma": {
+    "normalization": "global_reference_maximum",
+    "lower_dose_cutoff_percent": 10.0,
+    "interp_fraction": 10,
+    "3_percent_3_mm": {
+      "pass_rate_percent": 99.57014748388053
+    },
+    "2_percent_2_mm": {
+      "pass_rate_percent": 99.5553249833247
+    },
+    "1_percent_1_mm": {
+      "pass_rate_percent": 99.2885199733195
+    }
+  },
+  "maximum_dose": {
+    "deterministic_Gy": 0.018255917241238918,
+    "reference_Gy": 0.022929524931479383,
+    "relative_difference_percent": -20.38248809867048
+  },
+  "range": {
+    "deterministic_r80_mm": 143.96818071286273,
+    "reference_r80_mm": 144.07447899786638,
+    "r80_difference_mm": -0.10629828500363647,
+    "deterministic_dfw_mm": 3.9619993382689622,
+    "reference_dfw_mm": 2.533398788487906,
+    "dfw_difference_mm": 1.428600549781056,
+    "peak_search_from_mm": 122.50000000000001
+  },
+  "exact_reference": {
+    "reference": "Analytical",
+    "maximum_dose": {
+      "analytical_Gy": 0.022751600258755122,
+      "relative_difference_percent": -19.7598541042677
+    },
+    "range": {
+      "deterministic_r80_mm": 143.96818071286273,
+      "reference_r80_mm": 144.0736265688438,
+      "r80_difference_mm": -0.10544585598104561,
+      "deterministic_dfw_mm": 3.9619993382689622,
+      "reference_dfw_mm": 2.5372730691951837,
+      "dfw_difference_mm": 1.4247262690737783,
+      "peak_search_from_mm": 122.50000000000001
+    },
+    "gamma": {
+      "3_percent_3_mm": 99.56024626209323,
+      "2_percent_2_mm": 99.56024626209323,
+      "1_percent_1_mm": 99.29639401934917
+    }
+  },
+  "central_axis_bragg_peak": {
+    "deterministic_depth_mm": 141.50000000000003,
+    "reference_depth_mm": 142.50000000000003,
+    "depth_difference_mm": -1.0000000000000009
+  }
+}

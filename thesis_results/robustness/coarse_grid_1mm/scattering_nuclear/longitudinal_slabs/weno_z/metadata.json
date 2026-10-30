@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-29T14:15:57.162019+01:00",
+  "config_hash": "f7ea8beeff64a79d46ed5c4c238c0fc3d8b7ce05f334b765b2e24965cdc0bb0d",
+  "git_commit": null,
+  "git_dirty": null,
+  "git_state_hash": null,
+  "runtime_seconds": 17.987945241999114,
+  "bfp_mc_runtime_seconds": 65.50478099000065,
+  "topas_runtime_seconds": null,
+  "speedup_vs_bfp_mc_x": 3.6415933064470845,
+  "speedup_vs_topas_x": "-",
+  "backend": "CPU"
+}

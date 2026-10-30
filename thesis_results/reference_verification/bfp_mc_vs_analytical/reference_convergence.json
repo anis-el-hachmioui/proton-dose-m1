@@ -1,0 +1,82 @@
+[
+  {
+    "histories": 10000,
+    "runtime_seconds": 0.016415310998127097,
+    "l1": 0.33834514631005,
+    "l2": 0.33102424273979686,
+    "linf": 0.8066911052535449,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 158.25,
+    "peak_depth_difference_mm": 1.0000000000000009
+  },
+  {
+    "histories": 30000,
+    "runtime_seconds": 0.05074245600189897,
+    "l1": 0.19942640022800134,
+    "l2": 0.18884274047781172,
+    "linf": 0.4858461691670426,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 158.25,
+    "peak_depth_difference_mm": 1.0000000000000009
+  },
+  {
+    "histories": 100000,
+    "runtime_seconds": 0.19419011900026817,
+    "l1": 0.11107164758673252,
+    "l2": 0.103794115341136,
+    "linf": 0.24456267808946397,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  },
+  {
+    "histories": 300000,
+    "runtime_seconds": 0.5184378029989603,
+    "l1": 0.06489718419215842,
+    "l2": 0.061067606823611384,
+    "linf": 0.17201467893460307,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  },
+  {
+    "histories": 1000000,
+    "runtime_seconds": 1.688056178001716,
+    "l1": 0.035959176009101056,
+    "l2": 0.033964614891610005,
+    "linf": 0.07930424003515772,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  },
+  {
+    "histories": 3000000,
+    "runtime_seconds": 5.310212694999791,
+    "l1": 0.021027551107703872,
+    "l2": 0.01966682585964206,
+    "linf": 0.0451394417261189,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  },
+  {
+    "histories": 10000000,
+    "runtime_seconds": 17.502322805001313,
+    "l1": 0.011229864104449056,
+    "l2": 0.010448391133419107,
+    "linf": 0.024669522671651133,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  },
+  {
+    "histories": 100000000,
+    "runtime_seconds": 166.81562150899845,
+    "l1": 0.003614139638285031,
+    "l2": 0.0033978280769398454,
+    "linf": 0.006769947568365975,
+    "analytical_peak_depth_mm": 157.25,
+    "bfp_peak_depth_mm": 157.25,
+    "peak_depth_difference_mm": 0.0
+  }
+]

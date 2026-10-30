@@ -1,0 +1,22 @@
+\begin{tabular}{l rrr rrr}
+\toprule
+ & \multicolumn{3}{c}{$\gamma$ pass rate [\%]} & \multicolumn{3}{c}{Difference to reference} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Scheme & $3\%/3$\,mm & $2\%/2$\,mm & $1\%/1$\,mm & \shortstack{$\delta_{\max}$\\{}[\%]} & \shortstack{$\Delta R_{80}$\\{}[mm]} & \shortstack{$\Delta\mathrm{DFW}$\\{}[mm]} \\
+\midrule
+\multicolumn{7}{l}{\emph{Homogeneous water}} \\
+\quad First order & $96.91$ & $96.33$ & $92.54$ & $-50.8$ & $0.11$ & $9.67$ \\
+\quad MUSCL & $99.35$ & $99.20$ & $98.32$ & $-26.8$ & $-0.04$ & $2.55$ \\
+\quad WENO-Z & $100.00$ & $100.00$ & $100.00$ & $-0.8$ & $-0.01$ & $0.05$ \\
+\addlinespace
+\multicolumn{7}{l}{\emph{Depth-wise slab}} \\
+\quad First order & $96.33$ & $95.66$ & $91.14$ & $-52.3$ & $0.22$ & $10.44$ \\
+\quad MUSCL & $99.08$ & $98.88$ & $97.75$ & $-30.0$ & $-0.03$ & $3.06$ \\
+\quad WENO-Z & $100.00$ & $99.99$ & $99.98$ & $-2.5$ & $-0.05$ & $0.18$ \\
+\addlinespace
+\multicolumn{7}{l}{\emph{Lateral interface}} \\
+\quad First order & $96.41$ & $95.75$ & $91.44$ & $-51.0$ & $0.11$ & $9.67$ \\
+\quad MUSCL & $99.07$ & $98.92$ & $97.85$ & $-27.3$ & $-0.04$ & $2.55$ \\
+\quad WENO-Z & $99.99$ & $99.98$ & $99.97$ & $-1.4$ & $-0.01$ & $0.05$ \\
+\bottomrule
+\end{tabular}

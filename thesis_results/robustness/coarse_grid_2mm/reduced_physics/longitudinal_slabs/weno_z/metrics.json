@@ -1,0 +1,64 @@
+{
+  "reference": "BFP Monte Carlo",
+  "performance": {
+    "deterministic_runtime_seconds": 1.4614019789987651,
+    "topas_runtime_seconds": null,
+    "bfp_mc_runtime_seconds": 17.692612774000736,
+    "speedup_vs_bfp_mc_x": 12.106602446318218,
+    "speedup_vs_topas_x": "-"
+  },
+  "gamma": {
+    "normalization": "global_reference_maximum",
+    "lower_dose_cutoff_percent": 10.0,
+    "interp_fraction": 10,
+    "3_percent_3_mm": {
+      "pass_rate_percent": 96.85658153241651
+    },
+    "2_percent_2_mm": {
+      "pass_rate_percent": 96.85658153241651
+    },
+    "1_percent_1_mm": {
+      "pass_rate_percent": 94.49901768172889
+    }
+  },
+  "maximum_dose": {
+    "deterministic_Gy": 0.01062668159510925,
+    "reference_Gy": 0.016369632340484802,
+    "relative_difference_percent": -35.08295498593628
+  },
+  "range": {
+    "deterministic_r80_mm": 143.5188481931948,
+    "reference_r80_mm": 143.99528337485145,
+    "r80_difference_mm": -0.4764351816566592,
+    "deterministic_dfw_mm": 6.985730226442027,
+    "reference_dfw_mm": 2.797389515134363,
+    "dfw_difference_mm": 4.1883407113076645,
+    "peak_search_from_mm": 123.00000000000001
+  },
+  "exact_reference": {
+    "reference": "Analytical",
+    "maximum_dose": {
+      "analytical_Gy": 0.016316767283015628,
+      "relative_difference_percent": -34.87262880698969
+    },
+    "range": {
+      "deterministic_r80_mm": 143.5188481931948,
+      "reference_r80_mm": 143.9941736571021,
+      "r80_difference_mm": -0.4753254639073001,
+      "deterministic_dfw_mm": 6.985730226442027,
+      "reference_dfw_mm": 2.7993518198707044,
+      "dfw_difference_mm": 4.186378406571323,
+      "peak_search_from_mm": 123.00000000000001
+    },
+    "gamma": {
+      "3_percent_3_mm": 96.89922480620154,
+      "2_percent_2_mm": 96.89922480620154,
+      "1_percent_1_mm": 94.57364341085271
+    }
+  },
+  "central_axis_bragg_peak": {
+    "deterministic_depth_mm": 139.0,
+    "reference_depth_mm": 143.00000000000003,
+    "depth_difference_mm": -4.0000000000000036
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "reference": "self",
+  "refinement_axis": "z",
+  "refinement_values": [
+    40,
+    80,
+    160,
+    320,
+    640,
+    1280,
+    2560
+  ],
+  "refinement_ratio": 2,
+  "couple_energy_step": true,
+  "expected_order": 3,
+  "region": {
+    "kind": "central_axis",
+    "z_min": 0.0,
+    "z_max": 0.027
+  },
+  "observables": [
+    {
+      "name": "dose",
+      "energy": null
+    },
+    {
+      "name": "phi",
+      "energy": 60.0
+    }
+  ]
+}

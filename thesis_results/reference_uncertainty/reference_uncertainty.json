@@ -1,0 +1,458 @@
+[
+  {
+    "case": "extended/homogeneous_water",
+    "model": "Extended",
+    "benchmark": "Homogeneous water",
+    "module": "thesis_experiments.scattering_nuclear.homogeneous_water",
+    "created": "2026-10-20T16:37:20",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      9.003718937001395,
+      9.155336084000737,
+      9.11788381199949,
+      8.973348810999596,
+      8.815179118999367,
+      8.900143910999759,
+      8.843162848999782,
+      8.970582468002249,
+      8.979663133999566,
+      8.964261261000502
+    ],
+    "runtime_per_history_seconds": 8.972328038600244e-06,
+    "estimated_runtime_at_reference_histories_seconds": 897.2328038600244,
+    "maximum_dose_Gy": 0.00470556136614063,
+    "peak_voxel_index": [
+      49,
+      50,
+      313
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.5672769032601853,
+      "peak_region_rms": 0.511177035263798,
+      "peak_region_voxels": 466,
+      "above_50_percent_median": 0.2707264757204693,
+      "above_50_percent_p95": 0.6646663755913029,
+      "above_50_percent_voxels": 56413,
+      "above_10_percent_median": 0.4420960734919935,
+      "above_10_percent_p95": 1.0407635390918137,
+      "above_10_percent_voxels": 461266
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 1.3033567066614644,
+      "standard_deviation": 0.27539326130681613,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 26130196.13810862,
+        "runtime_seconds": 234.44869146407578
+      },
+      "2_percent": {
+        "histories": 6532549.034527155,
+        "runtime_seconds": 58.612172866018945
+      }
+    }
+  },
+  {
+    "case": "extended/longitudinal_slabs",
+    "model": "Extended",
+    "benchmark": "Depth-wise slab",
+    "module": "thesis_experiments.scattering_nuclear.longitudinal_slabs",
+    "created": "2026-10-20T16:41:41",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      25.814783138001076,
+      25.640523849997408,
+      25.730852617998607,
+      26.20642462699834,
+      26.265161191000516,
+      26.11294107300273,
+      26.997555280999222,
+      26.085219969001628,
+      25.903330615001323,
+      25.865901773999212
+    ],
+    "runtime_per_history_seconds": 2.6062269413600006e-05,
+    "estimated_runtime_at_reference_histories_seconds": 2606.2269413600006,
+    "maximum_dose_Gy": 0.005144178925357423,
+    "peak_voxel_index": [
+      50,
+      50,
+      284
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.3543920853311618,
+      "peak_region_rms": 0.46878086705290595,
+      "peak_region_voxels": 455,
+      "above_50_percent_median": 0.2729011884798229,
+      "above_50_percent_p95": 0.653575602053986,
+      "above_50_percent_voxels": 46638,
+      "above_10_percent_median": 0.4243624229503998,
+      "above_10_percent_p95": 1.0205068616568964,
+      "above_10_percent_voxels": 391360
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 1.0535473504008377,
+      "standard_deviation": 0.22512409649114354,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 21975550.13148742,
+        "runtime_seconds": 572.7327080388982
+      },
+      "2_percent": {
+        "histories": 5493887.532871855,
+        "runtime_seconds": 143.18317700972455
+      }
+    }
+  },
+  {
+    "case": "extended/transversal_slabs",
+    "model": "Extended",
+    "benchmark": "Lateral interface",
+    "module": "thesis_experiments.scattering_nuclear.transversal_slabs",
+    "created": "2026-10-20T16:45:39",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      24.11154144199827,
+      24.371262642001966,
+      23.547021327998664,
+      23.57883773300273,
+      23.441774049999367,
+      23.604989123999985,
+      23.887148950001574,
+      23.57655024700216,
+      23.578054950001388,
+      23.711150674000237
+    ],
+    "runtime_per_history_seconds": 2.3740833114000635e-05,
+    "estimated_runtime_at_reference_histories_seconds": 2374.0833114000634,
+    "maximum_dose_Gy": 0.004756455996229965,
+    "peak_voxel_index": [
+      44,
+      48,
+      181
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.3741575250593654,
+      "peak_region_rms": 0.4344084279057428,
+      "peak_region_voxels": 160,
+      "above_50_percent_median": 0.2507582126475306,
+      "above_50_percent_p95": 0.4734030884849465,
+      "above_50_percent_voxels": 40046,
+      "above_10_percent_median": 0.4713965942873864,
+      "above_10_percent_p95": 1.0682721675204918,
+      "above_10_percent_voxels": 355957
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 0.7708028506541322,
+      "standard_deviation": 0.17812655453309018,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 18871068.223553892,
+        "runtime_seconds": 448.01488137831336
+      },
+      "2_percent": {
+        "histories": 4717767.055888473,
+        "runtime_seconds": 112.00372034457834
+      }
+    }
+  },
+  {
+    "case": "reduced/homogeneous_water",
+    "model": "Reduced",
+    "benchmark": "Homogeneous water",
+    "module": "thesis_experiments.reduced_physics.homogeneous_water",
+    "created": "2026-10-20T16:45:56",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      1.6923135479992197,
+      1.6578055249992758,
+      1.7102245610003592,
+      1.655830234001769,
+      1.6582327209980576,
+      1.6564263410000422,
+      1.6578251179998915,
+      1.6544059150000976,
+      1.661709799998789,
+      1.6568944649989135
+    ],
+    "runtime_per_history_seconds": 1.6661668227996416e-06,
+    "estimated_runtime_at_reference_histories_seconds": 166.61668227996415,
+    "maximum_dose_Gy": 0.023312791478469458,
+    "peak_voxel_index": [
+      50,
+      49,
+      314
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.20544270957823701,
+      "peak_region_rms": 0.24976755275206494,
+      "peak_region_voxels": 156,
+      "above_50_percent_median": 0.263402542599521,
+      "above_50_percent_p95": 0.4145241322918744,
+      "above_50_percent_voxels": 3333,
+      "above_10_percent_median": 0.25626794651717255,
+      "above_10_percent_p95": 0.5158985719131562,
+      "above_10_percent_voxels": 115391
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 0.3954698829347971,
+      "standard_deviation": 0.1945369714691129,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 6238383.040775554,
+        "runtime_seconds": 10.394186850456173
+      },
+      "2_percent": {
+        "histories": 1559595.7601938886,
+        "runtime_seconds": 2.598546712614043
+      }
+    }
+  },
+  {
+    "case": "reduced/longitudinal_slabs",
+    "model": "Reduced",
+    "benchmark": "Depth-wise slab",
+    "module": "thesis_experiments.reduced_physics.longitudinal_slabs",
+    "created": "2026-10-20T16:46:57",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      6.1426188069999625,
+      6.030040973000723,
+      6.013968058003229,
+      6.018970448003529,
+      6.073496091001289,
+      6.00008161200094,
+      5.994216981998761,
+      6.153973841999687,
+      6.029252682998049,
+      6.055070745998819
+    ],
+    "runtime_per_history_seconds": 6.051169024200499e-06,
+    "estimated_runtime_at_reference_histories_seconds": 605.1169024200499,
+    "maximum_dose_Gy": 0.02322792948095822,
+    "peak_voxel_index": [
+      49,
+      50,
+      285
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.24095290344860043,
+      "peak_region_rms": 0.2548697876290088,
+      "peak_region_voxels": 167,
+      "above_50_percent_median": 0.26941087259563096,
+      "above_50_percent_p95": 0.4276818126172012,
+      "above_50_percent_voxels": 3365,
+      "above_10_percent_median": 0.263022721525902,
+      "above_10_percent_p95": 0.5371735845444557,
+      "above_10_percent_voxels": 106201
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 0.3634654596484122,
+      "standard_deviation": 0.1291465856474232,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 6495860.864605605,
+        "runtime_seconds": 39.3075520494177
+      },
+      "2_percent": {
+        "histories": 1623965.2161514012,
+        "runtime_seconds": 9.826888012354425
+      }
+    }
+  },
+  {
+    "case": "reduced/transversal_slabs",
+    "model": "Reduced",
+    "benchmark": "Lateral interface",
+    "module": "thesis_experiments.reduced_physics.transversal_slabs",
+    "created": "2026-10-20T16:48:00",
+    "git_commit": "101ed15",
+    "git_dirty": false,
+    "grid_resolution": [
+      100,
+      100,
+      400
+    ],
+    "reference_histories": 100000000,
+    "batches": 10,
+    "histories_per_batch": 1000000,
+    "seeds": [
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010
+    ],
+    "threads": 12,
+    "batch_runtimes_seconds": [
+      5.975238250000984,
+      6.261071040997194,
+      6.677650344998256,
+      6.031160829003056,
+      5.9227343570019,
+      5.986170227999537,
+      6.32156634799685,
+      6.348844755000755,
+      6.23713394600054,
+      6.249728818998847
+    ],
+    "runtime_per_history_seconds": 6.201129891799792e-06,
+    "estimated_runtime_at_reference_histories_seconds": 620.1129891799792,
+    "maximum_dose_Gy": 0.023110491723703903,
+    "peak_voxel_index": [
+      50,
+      50,
+      314
+    ],
+    "relative_uncertainty_percent": {
+      "peak_voxel": 0.20047277578720923,
+      "peak_region_rms": 0.2523714171069305,
+      "peak_region_voxels": 98,
+      "above_50_percent_median": 0.2650011299335579,
+      "above_50_percent_p95": 0.4143613692909053,
+      "above_50_percent_voxels": 2506,
+      "above_10_percent_median": 0.2594784001854018,
+      "above_10_percent_p95": 0.5142021833721268,
+      "above_10_percent_voxels": 89333
+    },
+    "maximum_dose_statistic_percent": {
+      "bias": 0.28330403955831857,
+      "standard_deviation": 0.11822847355688067,
+      "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+    },
+    "target_uncertainty_peak_region": {
+      "1_percent": {
+        "histories": 6369133.217256027,
+        "runtime_seconds": 39.495822378381334
+      },
+      "2_percent": {
+        "histories": 1592283.3043140068,
+        "runtime_seconds": 9.873955594595333
+      }
+    }
+  }
+]

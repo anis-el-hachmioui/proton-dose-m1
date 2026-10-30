@@ -1,0 +1,74 @@
+{
+  "steps_reduced": {
+    "standard_steps": {
+      "max_step_mm": 0.25,
+      "runtime_seconds": 166.81562150899845,
+      "l1": 0.003614139638285031,
+      "l2": 0.0033978280769398454,
+      "linf": 0.006769947568365975,
+      "idd_max_abs_difference_rel": 0.00012940967649976274,
+      "idd_peak_rel_difference": 7.813383365062876e-05,
+      "r80_difference_um": 0.24465276812768444,
+      "dfw_difference_um": 0.3570329149826801
+    },
+    "halved_steps": {
+      "max_step_mm": 0.125,
+      "runtime_seconds": 343.76553260900255,
+      "l1": 0.003617720246345212,
+      "l2": 0.003408089004233321,
+      "linf": 0.007005880041122056,
+      "idd_max_abs_difference_rel": 0.00035034993741638986,
+      "idd_peak_rel_difference": 0.0003503499374164498,
+      "r80_difference_um": -0.6647609493148909,
+      "dfw_difference_um": 1.0343016303426822
+    }
+  },
+  "steps_extended": {
+    "standard_steps": {
+      "histories": 10000000,
+      "max_step_mm": 0.25,
+      "runtime_seconds": 88.64385943899833,
+      "max_dose_rel_difference": 0.009400996523223126,
+      "lateral_sigma_max_rel_difference": 0.0003538685424879784,
+      "idd_max_abs_difference_rel": 0.0003574227144362528,
+      "idd_peak_rel_difference": -6.308343533734107e-05,
+      "r80_difference_um": -0.4601606314602602,
+      "dfw_difference_um": 0.04982482815218958
+    },
+    "halved_steps": {
+      "histories": 10000000,
+      "max_step_mm": 0.125,
+      "runtime_seconds": 164.43508200199722,
+      "max_dose_rel_difference": 0.03228415602420176,
+      "lateral_sigma_max_rel_difference": 0.0004448098522535915,
+      "idd_max_abs_difference_rel": 0.0004382408359980594,
+      "idd_peak_rel_difference": 5.845337491705571e-05,
+      "r80_difference_um": -1.1774947764331412,
+      "dfw_difference_um": -0.40130301226515286
+    }
+  },
+  "csda_range_mm": 158.73191894019166,
+  "fermi_eyges": {
+    "mc_over_fe_mean": 1.000516286476512,
+    "mc_over_fe_min": 0.9999443016843022,
+    "mc_over_fe_max": 1.0028050588633768,
+    "fe_sigma_at_0p9_r0_mm": 3.6337898576509455,
+    "fe_sigma_truncated_at_0p9_r0_mm": 3.613199892803039,
+    "mc_sigma_at_0p9_r0_mm": 3.623335131187498,
+    "depth_range_mm": [
+      5.0,
+      142.8587270461725
+    ]
+  },
+  "removal_and_escape": {
+    "mc_over_prediction_mean": 1.0008789104374378,
+    "mc_over_prediction_min": 1.0000663879162912,
+    "mc_over_prediction_max": 1.0027962738772591,
+    "survival_at_0p8_r0": 0.8821999917844284,
+    "fraction_inside_domain_at_0p9_r0": 0.9980832658574875,
+    "depth_range_mm": [
+      10.0,
+      126.98553515215335
+    ]
+  }
+}

@@ -10,7 +10,6 @@ results/
 topas_cache/
 topas_test/
 bfp_mc_cache/
-thesis_results/
 thesis_results_old/
 
 # Virtual environments
@@ -25,7 +24,6 @@ thesis_results copy/
 *.npz
 
 # All result folders and backups
-thesis_results*/
 
 # CT data (CORT, provided by E. Benschop), not redistributed
 data/ct/*
@@ -34,3 +32,7 @@ misc/
 # CORT prostate CT (CC0), see data/ct/README.md
 !data/ct/prostate.npz
 !data/ct/README.md
+
+# Thesis results without the large arrays (*.npz stays ignored)
+thesis_results_latex_moving_domain/
+thesis_results_backup*/

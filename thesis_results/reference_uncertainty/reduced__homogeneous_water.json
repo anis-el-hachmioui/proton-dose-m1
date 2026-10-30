@@ -1,0 +1,76 @@
+{
+  "case": "reduced/homogeneous_water",
+  "model": "Reduced",
+  "benchmark": "Homogeneous water",
+  "module": "thesis_experiments.reduced_physics.homogeneous_water",
+  "created": "2026-10-20T16:45:56",
+  "git_commit": "101ed15",
+  "git_dirty": false,
+  "grid_resolution": [
+    100,
+    100,
+    400
+  ],
+  "reference_histories": 100000000,
+  "batches": 10,
+  "histories_per_batch": 1000000,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010
+  ],
+  "threads": 12,
+  "batch_runtimes_seconds": [
+    1.6923135479992197,
+    1.6578055249992758,
+    1.7102245610003592,
+    1.655830234001769,
+    1.6582327209980576,
+    1.6564263410000422,
+    1.6578251179998915,
+    1.6544059150000976,
+    1.661709799998789,
+    1.6568944649989135
+  ],
+  "runtime_per_history_seconds": 1.6661668227996416e-06,
+  "estimated_runtime_at_reference_histories_seconds": 166.61668227996415,
+  "maximum_dose_Gy": 0.023312791478469458,
+  "peak_voxel_index": [
+    50,
+    49,
+    314
+  ],
+  "relative_uncertainty_percent": {
+    "peak_voxel": 0.20544270957823701,
+    "peak_region_rms": 0.24976755275206494,
+    "peak_region_voxels": 156,
+    "above_50_percent_median": 0.263402542599521,
+    "above_50_percent_p95": 0.4145241322918744,
+    "above_50_percent_voxels": 3333,
+    "above_10_percent_median": 0.25626794651717255,
+    "above_10_percent_p95": 0.5158985719131562,
+    "above_10_percent_voxels": 115391
+  },
+  "maximum_dose_statistic_percent": {
+    "bias": 0.3954698829347971,
+    "standard_deviation": 0.1945369714691129,
+    "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+  },
+  "target_uncertainty_peak_region": {
+    "1_percent": {
+      "histories": 6238383.040775554,
+      "runtime_seconds": 10.394186850456173
+    },
+    "2_percent": {
+      "histories": 1559595.7601938886,
+      "runtime_seconds": 2.598546712614043
+    }
+  }
+}

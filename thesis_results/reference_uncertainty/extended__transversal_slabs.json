@@ -1,0 +1,76 @@
+{
+  "case": "extended/transversal_slabs",
+  "model": "Extended",
+  "benchmark": "Lateral interface",
+  "module": "thesis_experiments.scattering_nuclear.transversal_slabs",
+  "created": "2026-10-20T16:45:39",
+  "git_commit": "101ed15",
+  "git_dirty": false,
+  "grid_resolution": [
+    100,
+    100,
+    400
+  ],
+  "reference_histories": 100000000,
+  "batches": 10,
+  "histories_per_batch": 1000000,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010
+  ],
+  "threads": 12,
+  "batch_runtimes_seconds": [
+    24.11154144199827,
+    24.371262642001966,
+    23.547021327998664,
+    23.57883773300273,
+    23.441774049999367,
+    23.604989123999985,
+    23.887148950001574,
+    23.57655024700216,
+    23.578054950001388,
+    23.711150674000237
+  ],
+  "runtime_per_history_seconds": 2.3740833114000635e-05,
+  "estimated_runtime_at_reference_histories_seconds": 2374.0833114000634,
+  "maximum_dose_Gy": 0.004756455996229965,
+  "peak_voxel_index": [
+    44,
+    48,
+    181
+  ],
+  "relative_uncertainty_percent": {
+    "peak_voxel": 0.3741575250593654,
+    "peak_region_rms": 0.4344084279057428,
+    "peak_region_voxels": 160,
+    "above_50_percent_median": 0.2507582126475306,
+    "above_50_percent_p95": 0.4734030884849465,
+    "above_50_percent_voxels": 40046,
+    "above_10_percent_median": 0.4713965942873864,
+    "above_10_percent_p95": 1.0682721675204918,
+    "above_10_percent_voxels": 355957
+  },
+  "maximum_dose_statistic_percent": {
+    "bias": 0.7708028506541322,
+    "standard_deviation": 0.17812655453309018,
+    "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+  },
+  "target_uncertainty_peak_region": {
+    "1_percent": {
+      "histories": 18871068.223553892,
+      "runtime_seconds": 448.01488137831336
+    },
+    "2_percent": {
+      "histories": 4717767.055888473,
+      "runtime_seconds": 112.00372034457834
+    }
+  }
+}

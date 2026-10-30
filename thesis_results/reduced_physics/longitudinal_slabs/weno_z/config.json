@@ -1,0 +1,79 @@
+{
+  "backend": "CPU",
+  "beam": {
+    "angular_spread": 0.0,
+    "center": [
+      0.0,
+      0.0
+    ],
+    "cutoff_sigma": 5.0,
+    "energy": 150.0,
+    "energy_spread": 1.0,
+    "n_protons": 1000000.0,
+    "sigma": [
+      0.002,
+      0.002
+    ]
+  },
+  "geometry": {
+    "background_material": "WATER",
+    "objects": [
+      {
+        "material": "BONE_COMPACT",
+        "x_max": 0.012,
+        "x_min": -0.012,
+        "y_max": 0.012,
+        "y_min": -0.012,
+        "z_max": 0.08,
+        "z_min": 0.06
+      }
+    ],
+    "resolution": [
+      100,
+      100,
+      400
+    ],
+    "size": [
+      0.024,
+      0.024,
+      0.2
+    ]
+  },
+  "numerics": {
+    "active_domain": false,
+    "active_guard_cells": 9,
+    "active_relative_tolerance": 1e-14,
+    "active_truncation_sigma": 5.0,
+    "cfl": 0.9,
+    "energy_min": 0.0001,
+    "energy_scheme": "IF_SSPRK3",
+    "energy_window_sigma": 5.0,
+    "max_energy_step": 0.25,
+    "moving_active_domain": false,
+    "spatial_scheme": "WENO_Z",
+    "vacuum_aware_cfl": false,
+    "wave_speeds": "EXACT"
+  },
+  "physics": {
+    "nuclear": false,
+    "scattering": "OFF"
+  },
+  "references": {
+    "additional_references": [
+      "ANALYTICAL"
+    ],
+    "bfp_mc_force_rerun": false,
+    "bfp_mc_histories": 100000000,
+    "bfp_mc_max_energy_loss_mev": 0.25,
+    "bfp_mc_max_scattering_optical_depth": 0.02,
+    "bfp_mc_max_step_mm": 0.25,
+    "bfp_mc_seed": 137,
+    "bfp_mc_stop_energy_mev": 1.0,
+    "bfp_mc_threads": 12,
+    "reference": "BFP_MC",
+    "topas_force_rerun": false,
+    "topas_histories": 1000000,
+    "topas_seed": 1
+  },
+  "solve_deterministic": true
+}

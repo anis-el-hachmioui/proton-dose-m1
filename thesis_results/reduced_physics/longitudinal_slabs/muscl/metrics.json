@@ -1,0 +1,64 @@
+{
+  "reference": "BFP Monte Carlo",
+  "performance": {
+    "deterministic_runtime_seconds": 1042.4609433539954,
+    "topas_runtime_seconds": null,
+    "bfp_mc_runtime_seconds": 597.8884800329979,
+    "speedup_vs_bfp_mc_x": 0.5735356167007678,
+    "speedup_vs_topas_x": "-"
+  },
+  "gamma": {
+    "normalization": "global_reference_maximum",
+    "lower_dose_cutoff_percent": 10.0,
+    "interp_fraction": 10,
+    "3_percent_3_mm": {
+      "pass_rate_percent": 99.08097879037697
+    },
+    "2_percent_2_mm": {
+      "pass_rate_percent": 98.8833096005396
+    },
+    "1_percent_1_mm": {
+      "pass_rate_percent": 97.75350370981039
+    }
+  },
+  "maximum_dose": {
+    "deterministic_Gy": 0.016189252295290172,
+    "reference_Gy": 0.023140918855016346,
+    "relative_difference_percent": -30.040581375701226
+  },
+  "range": {
+    "deterministic_r80_mm": 144.1041167122346,
+    "reference_r80_mm": 144.12967702871646,
+    "r80_difference_mm": -0.025560316481848533,
+    "deterministic_dfw_mm": 5.50926385949102,
+    "reference_dfw_mm": 2.450392986025035,
+    "dfw_difference_mm": 3.0588708734659855,
+    "peak_search_from_mm": 122.25000000000001
+  },
+  "exact_reference": {
+    "reference": "Analytical",
+    "maximum_dose": {
+      "analytical_Gy": 0.023107460133124053,
+      "relative_difference_percent": -29.939282802945428
+    },
+    "range": {
+      "deterministic_r80_mm": 144.1041167122346,
+      "reference_r80_mm": 144.12996564369877,
+      "r80_difference_mm": -0.025848931464150793,
+      "deterministic_dfw_mm": 5.50926385949102,
+      "reference_dfw_mm": 2.4504945568283034,
+      "dfw_difference_mm": 3.058769302662717,
+      "peak_search_from_mm": 122.25000000000001
+    },
+    "gamma": {
+      "3_percent_3_mm": 99.07500840901446,
+      "2_percent_2_mm": 98.88253541129424,
+      "1_percent_1_mm": 97.7538588033038
+    }
+  },
+  "central_axis_bragg_peak": {
+    "deterministic_depth_mm": 140.25,
+    "reference_depth_mm": 142.25000000000003,
+    "depth_difference_mm": -2.0000000000000018
+  }
+}

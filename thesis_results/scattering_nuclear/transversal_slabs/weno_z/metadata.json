@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-10-21T02:00:27.837671+02:00",
+  "config_hash": "d67e559aff3ccecedd9813d74f8cbeb97a4a758555dbbc34bdc34b9c2d7a0295",
+  "git_commit": "3ef7a4d29376cd69d5faf96911f71f743d3e7b54",
+  "git_dirty": false,
+  "git_state_hash": "1eba9d0d01daf817717706fd6f8f98ad873e3c3c9cf28794c967a45544534689",
+  "runtime_seconds": 1938.3735290900004,
+  "bfp_mc_runtime_seconds": 2312.673166187,
+  "topas_runtime_seconds": null,
+  "speedup_vs_bfp_mc_x": 1.1930998496831104,
+  "speedup_vs_topas_x": "-",
+  "backend": "CPU"
+}

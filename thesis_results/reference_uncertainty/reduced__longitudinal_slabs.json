@@ -1,0 +1,76 @@
+{
+  "case": "reduced/longitudinal_slabs",
+  "model": "Reduced",
+  "benchmark": "Depth-wise slab",
+  "module": "thesis_experiments.reduced_physics.longitudinal_slabs",
+  "created": "2026-10-20T16:46:57",
+  "git_commit": "101ed15",
+  "git_dirty": false,
+  "grid_resolution": [
+    100,
+    100,
+    400
+  ],
+  "reference_histories": 100000000,
+  "batches": 10,
+  "histories_per_batch": 1000000,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010
+  ],
+  "threads": 12,
+  "batch_runtimes_seconds": [
+    6.1426188069999625,
+    6.030040973000723,
+    6.013968058003229,
+    6.018970448003529,
+    6.073496091001289,
+    6.00008161200094,
+    5.994216981998761,
+    6.153973841999687,
+    6.029252682998049,
+    6.055070745998819
+  ],
+  "runtime_per_history_seconds": 6.051169024200499e-06,
+  "estimated_runtime_at_reference_histories_seconds": 605.1169024200499,
+  "maximum_dose_Gy": 0.02322792948095822,
+  "peak_voxel_index": [
+    49,
+    50,
+    285
+  ],
+  "relative_uncertainty_percent": {
+    "peak_voxel": 0.24095290344860043,
+    "peak_region_rms": 0.2548697876290088,
+    "peak_region_voxels": 167,
+    "above_50_percent_median": 0.26941087259563096,
+    "above_50_percent_p95": 0.4276818126172012,
+    "above_50_percent_voxels": 3365,
+    "above_10_percent_median": 0.263022721525902,
+    "above_10_percent_p95": 0.5371735845444557,
+    "above_10_percent_voxels": 106201
+  },
+  "maximum_dose_statistic_percent": {
+    "bias": 0.3634654596484122,
+    "standard_deviation": 0.1291465856474232,
+    "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+  },
+  "target_uncertainty_peak_region": {
+    "1_percent": {
+      "histories": 6495860.864605605,
+      "runtime_seconds": 39.3075520494177
+    },
+    "2_percent": {
+      "histories": 1623965.2161514012,
+      "runtime_seconds": 9.826888012354425
+    }
+  }
+}

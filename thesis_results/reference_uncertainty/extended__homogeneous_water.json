@@ -1,0 +1,76 @@
+{
+  "case": "extended/homogeneous_water",
+  "model": "Extended",
+  "benchmark": "Homogeneous water",
+  "module": "thesis_experiments.scattering_nuclear.homogeneous_water",
+  "created": "2026-10-20T16:37:20",
+  "git_commit": "101ed15",
+  "git_dirty": false,
+  "grid_resolution": [
+    100,
+    100,
+    400
+  ],
+  "reference_histories": 100000000,
+  "batches": 10,
+  "histories_per_batch": 1000000,
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010
+  ],
+  "threads": 12,
+  "batch_runtimes_seconds": [
+    9.003718937001395,
+    9.155336084000737,
+    9.11788381199949,
+    8.973348810999596,
+    8.815179118999367,
+    8.900143910999759,
+    8.843162848999782,
+    8.970582468002249,
+    8.979663133999566,
+    8.964261261000502
+  ],
+  "runtime_per_history_seconds": 8.972328038600244e-06,
+  "estimated_runtime_at_reference_histories_seconds": 897.2328038600244,
+  "maximum_dose_Gy": 0.00470556136614063,
+  "peak_voxel_index": [
+    49,
+    50,
+    313
+  ],
+  "relative_uncertainty_percent": {
+    "peak_voxel": 0.5672769032601853,
+    "peak_region_rms": 0.511177035263798,
+    "peak_region_voxels": 466,
+    "above_50_percent_median": 0.2707264757204693,
+    "above_50_percent_p95": 0.6646663755913029,
+    "above_50_percent_voxels": 56413,
+    "above_10_percent_median": 0.4420960734919935,
+    "above_10_percent_p95": 1.0407635390918137,
+    "above_10_percent_voxels": 461266
+  },
+  "maximum_dose_statistic_percent": {
+    "bias": 1.3033567066614644,
+    "standard_deviation": 0.27539326130681613,
+    "note": "Upper estimate of the bias of max(D) for N_ref histories (N^(-1/2) extrapolation from single batches), and the run-to-run standard deviation of max(D). Positive bias means the reference maximum lies above the exact maximum."
+  },
+  "target_uncertainty_peak_region": {
+    "1_percent": {
+      "histories": 26130196.13810862,
+      "runtime_seconds": 234.44869146407578
+    },
+    "2_percent": {
+      "histories": 6532549.034527155,
+      "runtime_seconds": 58.612172866018945
+    }
+  }
+}
