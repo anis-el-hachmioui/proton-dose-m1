@@ -203,7 +203,7 @@ def main():
         ax.axvline(e0, color="0.4", ls="--", lw=0.9)
     ax.set_xlabel("Energy $E$ [MeV]")
     ax.set_ylabel(r"$d\ln S/d\ln E$ of the tabulated $S$ (water)")
-    ax.set_title("Stopping-power table (ICRU90 nodes dashed)")
+    ax.set_title("Stopping-power table (ICRU90 tabulation energies dashed)")
     ax.grid(True, alpha=0.25)
     fig.tight_layout()
     fig.savefig(OUT_DIR / "spatial_convergence_profile.pdf", bbox_inches="tight")

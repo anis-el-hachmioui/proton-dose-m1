@@ -334,7 +334,7 @@ def generate_reference_tables(
     # Relative L2 error of the laterally integrated depth dose, recorded by
     # the reference verification since the converged analytical quadrature.
     idd_row = (
-        "Relative $L_2$ error of integrated depth dose & "
+        "Relative $L^2$ error of integrated depth dose & "
         + latex_scientific(final["idd_l2"])
         + " \\\\\n"
         if "idd_l2" in final
@@ -347,9 +347,9 @@ def generate_reference_tables(
 Metric & Value \\
 \midrule
 BFP histories & {latex_histories(final["histories"])} \\
-Relative $L_1$ dose error & {latex_scientific(final["l1"])} \\
-Relative $L_2$ dose error & {latex_scientific(final["l2"])} \\
-Relative $L_\infty$ dose error & {latex_scientific(final["linf"])} \\
+Relative $L^1$ dose error & {latex_scientific(final["l1"])} \\
+Relative $L^2$ dose error & {latex_scientific(final["l2"])} \\
+Relative $L^\infty$ dose error & {latex_scientific(final["linf"])} \\
 {idd_row}Bragg-peak depth difference [mm] & {float(final["peak_depth_difference_mm"]):.3f} \\
 BFP MC runtime [s] & {float(final["runtime_seconds"]):.3f} \\
 \bottomrule
@@ -387,7 +387,7 @@ BFP MC runtime [s] & {float(final["runtime_seconds"]):.3f} \\
         [
             r"\begin{tabular}{rcc}",
             r"\toprule",
-            r"Histories & Relative $L_2$ dose error & Runtime [s] \\",
+            r"Histories & Relative $L^2$ dose error & Runtime [s] \\",
             r"\midrule",
             *rows,
             r"\bottomrule",
@@ -610,7 +610,10 @@ def _latex_number(
         scale = 10.0 ** decimals
         value = math.floor(value * scale + 1e-9) / scale
 
-    return f"${value:.{decimals}f}$"
+    text = f"{value:.{decimals}f}"
+    if float(text) == 0.0:
+        text = text.lstrip("-")  # no "-0.000" for values that round to zero
+    return f"${text}$"
 
 
 def generate_model_benchmark_tables(
