@@ -212,3 +212,7 @@ If you use this code, please cite the thesis:
 
 GitHub's *Cite this repository* button gives the same reference in BibTeX
 and APA format (from `CITATION.cff`).
+
+## Copyright
+
+Copyright © 2026 Anis El Hachmioui. All rights reserved. See [LICENSE](LICENSE).
